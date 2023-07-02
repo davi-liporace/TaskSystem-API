@@ -1,6 +1,6 @@
 ﻿namespace TaskSistem_API.Models
 {
-    public class Task
+    public class TaskModel
     {
         public int Id { get; set; }
 
