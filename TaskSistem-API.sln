@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskSistem-API", "TaskSistem-API\TaskSistem-API.csproj", "{7FADF04E-607A-4077-91DD-6DB9B3D34FA8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7FADF04E-607A-4077-91DD-6DB9B3D34FA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FADF04E-607A-4077-91DD-6DB9B3D34FA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FADF04E-607A-4077-91DD-6DB9B3D34FA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FADF04E-607A-4077-91DD-6DB9B3D34FA8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AFCD43A4-B08B-4FCB-A8E6-1CAD659FB94B}
+	EndGlobalSection
+EndGlobal
