@@ -20,7 +20,7 @@ namespace TaskSistem_API
 
             builder.Services.AddEntityFrameworkSqlServer()
                 .AddDbContext<TaskSystemDBContext>(
-                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DataBase"))
+                options => options.UseNpgsql(builder.Configuration.GetConnectionString("postgres"))
                 );
 
             builder.Services.AddScoped<IUserRepository, UserRepository>();
