@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using TaskSistem_API.Models;
+using TaskSistem_API.Repositories;
+using TaskSistem_API.Repositories.Interfaces;
 
 namespace TaskSistem_API.Controllers
 {
@@ -8,10 +10,28 @@ namespace TaskSistem_API.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+        private readonly IUserRepository _userRepository;
+        public UserController( IUserRepository userRepository) {
+            _userRepository = userRepository;
+        }
         [HttpGet]
-        public ActionResult<List<UserModel>> GetAllUser()
+        public async Task <ActionResult<List<UserModel>>> GetAllUser()
         {
-            return Ok();
+          List<UserModel> users =  await _userRepository.GetAll();
+            return Ok(users);
+        }
+        [HttpGet("{id}")]
+        public async Task<ActionResult<UserModel>> GetById(int id)
+        {
+            UserModel user = await _userRepository.GetById(id);
+            return Ok(user);
+        }
+        [HttpPost]
+        public async Task <ActionResult<UserModel>> Add([FromBody] UserModel userModel)
+        {
+           UserModel user = await _userRepository.Add(userModel);
+
+            return Ok(user);
         }
     }
 }
